@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom right, #232526, #414345);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+ .container {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    line-height: 1.6;
+    user-select: none;
+    margin-top: 25px;
+}
+
+.container input { 
+    /* z-index: -10; */
+    position: absolute;
+    opacity: 0;
+    pointer-events: none; 
+    width: 1px; 
+    height: 1px; 
+    left: -9999px; 
+}
+
+#pg {
+    color: #d1d1d1;
+    word-break: break-word;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+#pg span.active {
+    border-bottom: 2px solid #00cec9;
+    animation: blink 1s ease-in-out infinite;
+}
+
+.result {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.result div {
+    text-align: center;
+    padding: 10px;
+    flex: 1;
+    min-width: 100px;
+}
+
+.result .txt2 {
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #ff7675;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+button {
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+    /* width: 100%; */
+}
+
+button:hover {
+    background-color: #74b9ff;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+#pg span.correct {
+    color: #00b894;
+}
+
+#pg span.incorrect {
+    color: #d63031;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    #pg {
+        font-size: 1.1rem;
+    }
+
+    button {
+        padding: 10px 16px;
+        font-size: 14px;
+        width: 100%;
+    }
+}

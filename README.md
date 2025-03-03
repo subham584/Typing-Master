@@ -1,1 +1,2 @@
 # Typing-Master
+Typing-Master is a web application designed to test and improve your typing speed and accuracy. It provides random paragraphs for you to type while tracking your mistakes, WPM (Words Per Minute), CPM (Characters Per Minute), and time remaining.
